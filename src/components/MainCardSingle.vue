@@ -1,5 +1,6 @@
 <script setup>
 import { faker } from '@faker-js/faker'
+import { RouterLink } from 'vue-router'
 const foodname = faker.food.dish()
 const food_description = faker.food.description()
 const ingredients = faker.food.ingredient()
@@ -13,6 +14,7 @@ const username = faker.internet.userName({firstName: firstname, lastName: lastna
 
 <template>
     <!-- {{ foodname }} <br /> -->
+      <RouterLink :to="{name: 'CardDetails', params: {id: foodname}}">
       <div class="border border-gray-400 rounded-lg shadow bg-gray-200 h-full">
         <img :src="faker.image.urlLoremFlickr({category: 'food', width: 640, height: 480})" class="rounded-t-xl"/>
         <div class="p-4">
@@ -28,5 +30,5 @@ const username = faker.internet.userName({firstName: firstname, lastName: lastna
             <p class="mb-3 text-xl font-bold text-gray-600">{{ food_about }}</p>
         </div>
       </div>
-
+      </RouterLink>
 </template>
