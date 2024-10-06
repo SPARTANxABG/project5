@@ -14,7 +14,7 @@ const username = faker.internet.userName({firstName: firstname, lastName: lastna
 <template>
     <!-- {{ foodname }} <br /> -->
       <div class="border border-gray-400 rounded-lg shadow bg-gray-200 h-full">
-        <img :src="faker.image.urlLoremFlickr({category: 'food', width: 640, height: 480})"/>
+        <img :src="faker.image.urlLoremFlickr({category: 'food', width: 640, height: 480})" class="rounded-t-xl"/>
         <div class="p-4">
             <p class="mg-2 text-2xl font-bold">Food Name: </p>
             <p class="mb-3 text-xl font-bold text-gray-600">{{ foodname }}</p>
